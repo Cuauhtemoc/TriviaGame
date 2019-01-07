@@ -1,5 +1,26 @@
-#choices{
+body{
+    box-sizing: border-box;
+    
+}
+h1, h3{
+    display: flex;
+    margin: auto;
+}
+#question, #choices{
     display: flex;
     flex-direction: column;
+    margin: 1% auto;
+}
+img{
+    border: 5px solid black;
+    display: flex;
+    width: 275px;
+    height: 300px;
     margin: auto;
+}
+button{
+    display: flex;
+    margin: 1% auto;
+    width: 20%;
+
 }

@@ -1,6 +1,6 @@
 var TriviaQuestions;
 var gifs;
-var currenQuestion = 17;
+var currenQuestion = -1;
 var correctAnswer;
 var numberCorrect = 0;
 var numberIncorrect = 0;
@@ -40,7 +40,6 @@ function displayGame (){
         $('#choices').empty();
         $("#question").empty();
         var q = $("<h1>");
-        var c = $("<form>");
         var choice = []
         q.html(TriviaQuestions.results[currenQuestion].question);
         $("#question").append(q)
@@ -63,7 +62,7 @@ function timesUp(){
     numberIncorrect++;
     $('#choices').empty();
     $("#question").empty();
-    $("#choices").append(correctAnswer);
+    $("#choices").html("<h3> Times Up. The correct answer was: " + correctAnswer + "</h3>");
     clearTimeout(timer);
     setTimeout(displayGame, 5000);
 }
@@ -100,8 +99,8 @@ function win() {
     winnerGif.attr("src", gifs.data[currenQuestion].images.downsized.url);
     $('#choices').empty();
     $("#question").empty();
-    $("#question").append(correctAnswer);
-    $("#choices").append(winnerGif);
+    $("#question").html("<h3> Thats correct! Here's a cute dog! </h3>");
+    $("#choices").html(winnerGif);
     numberCorrect++;
     clearTimeout(timer);
     setTimeout(displayGame, 5000);
@@ -112,8 +111,8 @@ function lose(){
     winnerGif.attr("src", gifs.data[currenQuestion].images.downsized.url);
     $('#choices').empty();
     $("#question").empty();
-    $("#question").append(correctAnswer);
-    $("#choices").append(winnerGif);
+    $("#question").html("<h3> Sorry that's wrong the correct answer was " + correctAnswer + ", but here's a cute dog anyway. </h3>");
+    $("#choices").html(winnerGif);
     numberIncorrect++;
     clearTimeout(timer);
     setTimeout(displayGame, 5000);
