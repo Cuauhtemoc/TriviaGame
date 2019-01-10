@@ -1,6 +1,6 @@
 body{
     box-sizing: border-box;
-    
+    background: grey;
 }
 h1, h3{
     display: flex;
@@ -22,5 +22,7 @@ button{
     display: flex;
     margin: 1% auto;
     width: 20%;
-
+    background-color: teal;
+    color: white;
+    border: solid white 1px;
 }
