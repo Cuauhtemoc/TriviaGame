@@ -1,6 +1,17 @@
+*{
+    text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
 body{
     box-sizing: border-box;
     background: grey;
+    background-image: url("../images/movie.jpg");
+    background-size: cover;
+    height: 100vh;
+    color: white;
 }
 h1, h3{
     display: flex;
@@ -19,10 +30,12 @@ img{
     margin: auto;
 }
 button{
+    text-align: center;
     display: flex;
     margin: 1% auto;
+    padding: 10px;
     width: 20%;
-    background-color: teal;
+    background-color: transparent ;
     color: white;
-    border: solid white 1px;
+    border: dotted black 2px;
 }
